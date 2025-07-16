@@ -40,6 +40,8 @@ var smartSpacing = false;
 var skipRanges;
 
 module.exports = function unidecode(str, options) {
+  if (!str) return '';
+  
   german = options && options.german;
   deferredSmartSpacing = options && options.deferredSmartSpacing;
   smartSpacing = deferredSmartSpacing || (options && options.smartSpacing);
